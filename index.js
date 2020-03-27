@@ -11,18 +11,18 @@ const questions = [
       },
     {
     type: "input",
-    name: "name",
+    name: "repo",
     message: "What is the title of your Repo?"
     },
     {
     type: "input",
-    name: "name",
+    name: "description",
     message: "Please provide a description of your repo?"
     },
     {
     type: "checkbox",
     message: "What items would you like in your Table of Contents",
-    name: "stack",
+    name: "tableOfContents",
     choices: [
         "Installation", 
         "Usuage", 
@@ -37,6 +37,8 @@ const questions = [
 
 ];
 
+const prompts = inquirer.prompt(questions)
+
 
 // function writeToFile(fileName, data) {
 // }
@@ -46,6 +48,8 @@ const questions = [
 // }
 
 // init();
+
+
 
 
 
