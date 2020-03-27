@@ -22,7 +22,7 @@ const questions = [
     {
     type: "checkbox",
     message: "What items would you like in your Table of Contents",
-    name: "tableOfContents",
+    name: "#Table of Contents",
     choices: [
         "Installation", 
         "Usuage", 
@@ -37,7 +37,27 @@ const questions = [
 
 ];
 
-const prompts = inquirer.prompt(questions)
+function writeToFile(){
+
+inquirer.prompt(questions).then(answers => {
+    
+    const inputs = JSON.stringify(answers, null, ' ');
+
+    fs.appendFile("README.md",  inputs + '\n', function(err) {
+
+        if (err) {
+          console.log(err);
+        }
+        else {
+          console.log("Commit logged!");
+        }
+      
+      });
+})
+};
+
+writeToFile () 
+
 
 
 // function writeToFile(fileName, data) {
