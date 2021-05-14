@@ -4,7 +4,7 @@
   "description": "In this activity, you will build a simple command line application that accepts user input and writes it to a `.json` file.",
   "main": "index.js",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "init": "^0.1.2",
     "inquirer": "^7.1.0"
   },
